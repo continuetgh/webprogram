@@ -1,0 +1,20 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/school?serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+  servlet:
+      multipart:
+          max-file-size: 20MB     #单个文件最大限制
+          max-request-size: 200MB
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+files:
+  upload:
+    path:  D:/毕业设计/众里寻他/springboot/resources/file/
